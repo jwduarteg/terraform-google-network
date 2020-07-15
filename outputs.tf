@@ -3,6 +3,11 @@ output "network" {
   value       = module.management_network.network
 }
 
+output "network_id" {
+  description = "Id of the VPC network"
+  value       = module.management_network.network_id
+}
+
 # ---------------------------------------------------------------------------------------------------------------------
 # Public Subnetwork Outputs
 # ---------------------------------------------------------------------------------------------------------------------
@@ -97,4 +102,3 @@ output "instance_private_persistence" {
   description = "A reference (self link) to the instance tagged as private-persistence in a private subnetwork"
   value       = google_compute_instance.private_persistence.self_link
 }
-
